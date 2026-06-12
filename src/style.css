@@ -1,0 +1,228 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+}
+
+/* AUTH PAGE */
+.auth-box {
+  width: 350px;
+  margin: 80px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  text-align: center;
+}
+
+/* Keep auth page text links clickable and styled */
+.auth-box p {
+  cursor: pointer;
+  color: #6366f1;
+  margin-top: 15px;
+  transition: 0.2s;
+}
+.auth-box p:hover {
+  color: #818cf8;
+}
+
+input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+/* BUTTONS */
+button {
+  padding: 10px 15px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #6366f1;
+  color: white;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #4f46e5;
+  transform: scale(1.05);
+}
+
+/* MAIN LAYOUT */
+.main-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 220px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-right: 1px solid rgba(255,255,255,0.1);
+}
+
+.sidebar button {
+  width: 100%;
+  margin: 8px 0;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.sidebar button:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* CONTENT */
+.content {
+  flex: 1;
+  padding: 30px;
+}
+
+/* CREATE DOCUMENT + BUTTON */
+.plus-box {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #22c55e, #06b6d4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 15px rgba(34,197,94,0.5);
+}
+
+.plus-box:hover {
+  transform: rotate(90deg) scale(1.1);
+}
+
+/* DOCUMENT CARDS */
+.doc-card {
+  background: rgba(255,255,255,0.08);
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.doc-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255,255,255,0.15);
+}
+
+/* ACCOUNT BOX */
+.account-box {
+  background: rgba(255,255,255,0.08);
+  padding: 20px;
+  border-radius: 12px;
+  width: 300px;
+}
+
+/* DOCUMENT EDITOR COMPONENT OBJECTS */
+.editor-container {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  background: #f1f5f9;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Top Toolbar */
+.toolbar {
+  background: #ffffff;
+  padding: 10px;
+  border-bottom: 1px solid #cbd5e1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.toolbar-divider {
+  width: 1px;
+  height: 20px;
+  background-color: #cbd5e1;
+  margin: 0 4px;
+}
+
+/* Targeting only buttons inside the white toolbar */
+.toolbar button, .toolbar select {
+  background: transparent;
+  color: #334155;
+  padding: 6px 10px;
+  margin-top: 0;
+  font-size: 14px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+
+.toolbar button:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+  transform: none;
+}
+
+.toolbar select {
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  padding: 4px 8px;
+  outline: none;
+}
+
+/* Document Workspace Area */
+.paper-container {
+  padding: 30px 10px;
+  overflow-y: auto;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  background: #e2e8f0;
+}
+
+/* White canvas page */
+.editor-body {
+  width: 100%;
+  max-width: 750px;
+  min-height: 400px;
+  background: #ffffff;
+  color: #1e293b;
+  padding: 40px;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  outline: none;
+  font-size: 16px;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+/* Nested element structures */
+.editor-body h1 { color: #0f172a; font-size: 2em; margin-bottom: 10px; }
+.editor-body h2 { color: #0f172a; font-size: 1.5em; margin-bottom: 10px; }
+.editor-body h3 { color: #0f172a; font-size: 1.17em; margin-bottom: 10px; }
+.editor-body blockquote {
+  border-left: 4px solid #94a3b8;
+  padding-left: 15px;
+  color: #475569;
+  font-style: italic;
+  margin: 10px 0;
+}
+.editor-body ul, .editor-body ol {
+  padding-left: 20px;
+  margin: 10px 0;
+  color: #1e293b;
+}
